@@ -6,23 +6,25 @@
     <title>CutConnects - Effortless Salon Bookings</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/icon.png" type="image/png">
 </head>
-<body class="gradient-scroll">
+<body>
 
-    <!-- Header -->
+    <div class="background-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
     <header class="site-header">
-        <div class="container header-container"> <!-- Added header-container for flex layout -->
+        <div class="container header-container">
             <a href="index.html" class="site-logo-link">
                 <img src="assets/icon.png" alt="CutConnects Logo" class="site-logo">
                 <span class="site-title-fallback">CutConnects</span>
             </a>
-            <!-- Mobile Navigation Toggle -->
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger-icon"></span>
-            </button>
-            <!-- Desktop Navigation -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
             <nav class="desktop-nav">
                 <ul>
                     <li><a href="features.html">Features</a></li>
@@ -33,7 +35,6 @@
                 </ul>
             </nav>
         </div>
-        <!-- Mobile Navigation (initially hidden via CSS) -->
         <nav class="mobile-nav">
             <ul>
                 <li><a href="features.html">Features</a></li>
@@ -45,7 +46,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section" id="hero">
         <div class="container hero-container">
             <div class="hero-content">
@@ -53,7 +53,7 @@
                 <p>Discover and book your perfect salon experience from the comfort of your home. Seamlessly connect with top-rated hair stylists and salons.</p>
                 <div class="app-download-buttons">
                     <a href="download.html" class="btn btn-primary">Download for iOS</a>
-                    <a href="download.html" class="btn btn-secondary">Download for Android</a>
+                    <a href="download.html" class="btn btn-primary">Download for Android</a>
                 </div>
             </div>
             <div class="hero-image-placeholder">
@@ -66,7 +66,6 @@
         </div>
     </section>
 
-    <!-- Brief Intro Section -->
     <section class="intro-section">
         <div class="container">
             <h2>Welcome to CutConnects</h2>
@@ -74,7 +73,6 @@
         </div>
     </section>
 
-    <!-- Highlighted Feature Cards -->
     <section class="features-preview-section">
         <div class="container">
             <h2>Key Benefits</h2>
@@ -101,7 +99,6 @@
         </div>
     </section>
 
-    <!-- Call to Action for Download -->
     <section class="cta-download-section">
         <div class="container">
             <h2>Ready to Transform Your Salon Experience?</h2>
@@ -112,7 +109,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2025 CutConnects. All rights reserved.</p>

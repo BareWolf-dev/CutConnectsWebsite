@@ -6,100 +6,87 @@
     <title>Revolution - CutConnects</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
 </head>
-<body class="gradient-scroll"> <!-- Added class for JS -->
+<body>
 
-    <!-- Header -->
+    <div class="background-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
     <header class="site-header">
-        <div class="container header-container"> <!-- Added header-container -->
+        <div class="container header-container">
             <a href="index.html" class="site-logo-link">
                 <img src="assets/icon.png" alt="CutConnects Logo" class="site-logo">
                 <span class="site-title-fallback">CutConnects</span>
             </a>
-            <!-- Mobile Navigation Toggle -->
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger-icon"></span>
-            </button>
-            <!-- Desktop Navigation -->
+            <button class="mobile-nav-toggle">☰</button>
             <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="features.html">Features</a></li>
                     <li><a href="how-it-works.html">How It Works</a></li>
-                    <!-- <li><a href="revolution.html">Revolution</a></li> -->
                     <li><a href="download.html">Download</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <!-- Mobile Navigation -->
         <nav class="mobile-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="revolution.html">Revolution</a></li>
                 <li><a href="download.html">Download</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section for Revolution Page -->
-    <section class="page-hero-section" id="revolution-hero">
+    <section class="page-hero-section">
         <div class="container">
             <h1>Transforming the Salon Industry</h1>
             <p>CutConnects is more than just a booking app; it's a catalyst for change in the beauty service sector.</p>
         </div>
     </section>
 
-    <!-- Revolution Section -->
     <section class="revolution-section-page">
-        <div class="container revolution-container-page">
-            <div class="revolution-text-page">
+        <div class="container">
+            <div class="glass-panel">
                 <h2>Redefining Convenience and Connection</h2>
                 <p>CutConnects bridges the gap between clients seeking quality salon services and talented professionals. We empower users with the convenience of booking appointments from anywhere, at any time, ensuring they never miss out on their preferred styling sessions.</p>
                 <p>For salons and stylists, CutConnects offers a robust platform to manage schedules, reduce no-shows, attract new clients, and streamline operations. This digital transformation allows businesses to focus more on delivering exceptional service and less on administrative burdens.</p>
                 <p>Our vision is to create a connected ecosystem where finding, booking, and experiencing salon services is as simple and delightful as a fresh haircut. We believe this approach will elevate the entire industry, benefiting both consumers and businesses.</p>
             </div>
-            <div class="revolution-visual-page">
-                <!-- Visual element hinting at connection/growth -->
-                <div class="connection-animation-large">
-                    <div class="dot large"></div>
-                    <div class="dot large"></div>
-                    <div class="dot large"></div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Impact Section -->
     <section class="impact-section">
         <div class="container">
             <h2>The CutConnects Impact</h2>
-            <div class="impact-grid">
-                <div class="impact-item">
+            <div class="features-grid">
+                <div class="feature-card">
                     <h3>Time Savings</h3>
                     <p>Users save valuable time by avoiding phone calls and waiting periods.</p>
                 </div>
-                <div class="impact-item">
+                <div class="feature-card">
                     <h3>Increased Accessibility</h3>
                     <p>Salons gain wider visibility and reach a larger customer base.</p>
                 </div>
-                <div class="impact-item">
+                <div class="feature-card">
                     <h3>Operational Efficiency</h3>
                     <p>Salons benefit from better scheduling and fewer cancellations.</p>
                 </div>
-                <div class="impact-item">
-                    <h3>Enhanced Customer Experience</h3>
+                <div class="feature-card">
+                    <h3>Enhanced Experience</h3>
                     <p>Seamless booking and management lead to happier clients.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action for Download -->
     <section class="cta-download-section">
         <div class="container">
             <h2>Join the Revolution</h2>
@@ -110,7 +97,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2025 CutConnects. All rights reserved.</p>
