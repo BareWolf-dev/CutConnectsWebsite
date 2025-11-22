@@ -1,149 +1,118 @@
-/* --- 1. GLASS CARDS & PANELS --- */
-.glass-panel, .feature-card, .app-card-inner, .contact-form-wrapper {
-    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+/* --- 1. GLASS PANELS & CARDS --- */
+.glass-panel, .feature-card, .app-card, .contact-form-wrapper {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.6) 0%, rgba(10, 10, 10, 0.4) 100%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     position: relative;
     overflow: hidden;
 }
 
-.glass-panel { padding: 40px; }
-
-/* Hover Glow Effect */
-.feature-card:hover, .app-card:hover .app-card-inner {
+.feature-card:hover, .app-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 20px rgba(112, 0, 255, 0.15);
     border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 30px rgba(112, 0, 255, 0.15);
 }
 
-/* --- 2. BUTTONS (NEON) --- */
+/* --- 2. BUTTONS --- */
 .btn {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    color: white;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.05);
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px; font-weight: 600;
+    position: relative; overflow: hidden; z-index: 1; transition: 0.4s;
+    color: white; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05);
+    text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;
+    text-decoration: none;
 }
-
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     border-color: var(--primary-glow);
     box-shadow: 0 0 20px rgba(112, 0, 255, 0.4);
+    background: rgba(112, 0, 255, 0.15);
 }
 
 .btn-primary {
-    background: rgba(112, 0, 255, 0.15);
-    border-color: rgba(112, 0, 255, 0.3);
+    background: rgba(112, 0, 255, 0.2);
+    border-color: rgba(112, 0, 255, 0.4);
 }
 .btn-primary:hover {
-    background: rgba(112, 0, 255, 0.25);
-    box-shadow: 0 0 25px rgba(112, 0, 255, 0.5);
+    background: rgba(112, 0, 255, 0.35);
+    box-shadow: 0 0 30px rgba(112, 0, 255, 0.5);
 }
 
-/* --- 3. FEATURE CARDS --- */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.store-icon { font-size: 1.2rem; margin-bottom: 2px; }
+
+/* --- 3. DOWNLOAD APP CARDS (Static) --- */
+.app-cards-wrapper {
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    padding: 40px 0;
 }
 
-.feature-card {
-    padding: 40px; text-align: center;
+.app-card {
+    width: 340px;
+    padding: 50px 30px;
+    text-align: center;
     display: flex; flex-direction: column; align-items: center;
 }
 
+.app-card h3 {
+    font-size: 2rem; margin-bottom: 15px;
+    color: white;
+}
+
+.app-card p {
+    color: #a0a0b0; margin-bottom: 40px;
+    font-size: 1rem; line-height: 1.6;
+}
+
+.card-btn-group {
+    display: flex; flex-direction: column; gap: 15px; width: 100%; margin-top: auto;
+}
+
+.card-btn-group .btn {
+    width: 100%;
+}
+
+/* --- 4. FEATURE CARDS (Standard) --- */
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.feature-card { padding: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+
 .feature-icon {
-    font-size: 3rem; margin-bottom: 20px;
+    font-size: 3.5rem; margin-bottom: 25px;
     background: linear-gradient(135deg, var(--secondary-glow), var(--primary-glow));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 10px rgba(112, 0, 255, 0.4));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(112, 0, 255, 0.4));
 }
 
 .feature-link {
-    color: var(--secondary-glow); font-weight: 600; margin-top: auto;
+    color: var(--secondary-glow); margin-top: auto;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; font-weight: bold;
 }
 
-/* --- 4. PHONE MOCKUP (GLOWING) --- */
+/* --- 5. PHONE MOCKUP --- */
 .phone-mockup {
-    width: 300px; height: 600px;
-    background: #000;
-    border-radius: 50px;
-    border: 2px solid rgba(255,255,255,0.1);
+    width: 280px; height: 560px;
+    background: #050505; border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.15);
     box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    padding: 12px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+    padding: 12px; margin: 0 auto; position: relative;
 }
-/* The Glow behind the phone */
-.phone-mockup::after {
-    content: ''; position: absolute; top: 5%; left: 5%; width: 90%; height: 90%;
-    background: linear-gradient(var(--primary-glow), var(--secondary-glow));
-    filter: blur(50px); opacity: 0.4; z-index: -1;
-}
+.screen { background: #1a1a1a; border-radius: 38px; overflow: hidden; width: 100%; height: 100%; }
+.app-screenshot { width: 100%; height: 100%; object-fit: cover; }
 
-.screen {
-    background: #1a1a1a;
-    border-radius: 38px;
-    overflow: hidden; width: 100%; height: 100%;
-}
-
-.app-screenshot {
-    width: 100%; height: 100%; object-fit: cover;
-}
-
-/* --- 5. DOWNLOAD APP CARDS --- */
-.app-cards-wrapper { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-.app-card { width: 320px; height: 450px; perspective: 1000px; cursor: pointer; }
-.app-card-inner {
-    width: 100%; height: 100%; position: relative;
-    transform-style: preserve-3d; transition: transform 0.6s;
-}
-.app-card.is-active .app-card-inner { transform: rotateY(180deg); }
-
-.app-card-face {
-    position: absolute; width: 100%; height: 100%;
-    backface-visibility: hidden;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    padding: 30px; text-align: center;
-}
-.app-card-front { background: transparent; }
-.app-card-back {
-    transform: rotateY(180deg);
-    background: rgba(0,0,0,0.8); border-radius: 24px;
-}
-
-/* --- 6. CONTACT FORM --- */
+/* --- 6. FORM --- */
 .contact-form-section .container { display: flex; gap: 50px; }
-.contact-content { display: flex; width: 100%; gap: 50px; } /* Flex fix */
-
-.form-group { margin-bottom: 20px; text-align: left; }
-.form-group label { display: block; margin-bottom: 8px; color: white; font-weight: 600; }
+.contact-content { display: flex; width: 100%; gap: 50px; }
 .form-group input, .form-group textarea {
     width: 100%; padding: 15px;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
-    color: white; border-radius: 12px;
-    font-family: 'Inter', sans-serif;
-}
-.form-group input:focus, .form-group textarea:focus {
-    outline: none; border-color: var(--secondary-glow);
-    background: rgba(255,255,255,0.08);
-    box-shadow: 0 0 15px rgba(0, 194, 255, 0.2);
+    color: white; border-radius: 10px; margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
     .contact-content { flex-direction: column; }
-    .phone-mockup { width: 260px; height: 520px; }
+    .app-card { width: 100%; max-width: 320px; }
 }
