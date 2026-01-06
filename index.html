@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CutConnects - Effortless Salon Bookings</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="assets/icon.png" type="image/png">
     <script type="application/ld+json">
     {
@@ -35,6 +39,7 @@
     }
     </script>
 </head>
+
 <body>
 
     <div class="background-effects">
@@ -76,7 +81,8 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <h1>Your Next Salon Appointment, <span class="highlight">Effortlessly Booked.</span></h1>
-                <p>Discover and book your perfect salon experience from the comfort of your home. Seamlessly connect with top-rated hair stylists and salons.</p>
+                <p>Discover and book your perfect salon experience from the comfort of your home. Seamlessly connect
+                    with top-rated hair stylists and salons.</p>
                 <div class="app-download-buttons">
                     <a href="download.html" class="btn btn-primary">Download for iOS</a>
                     <a href="download.html" class="btn btn-primary">Download for Android</a>
@@ -85,7 +91,7 @@
             <div class="hero-image-placeholder">
                 <div class="phone-mockup">
                     <div class="screen">
-                         <img src="assets/homepage.jpeg" alt="CutConnects App Screenshot" class="app-screenshot">
+                        <img src="assets/homepage.jpeg" alt="CutConnects App Screenshot" class="app-screenshot">
                     </div>
                 </div>
             </div>
@@ -95,7 +101,27 @@
     <section class="intro-section">
         <div class="container">
             <h2>Welcome to CutConnects</h2>
-            <p>We're revolutionizing how you find and book salon services. Say goodbye to the hassle and hello to a seamless, modern experience designed for you and your stylist.</p>
+            <p>We're revolutionizing how you find and book salon services. Say goodbye to the hassle and hello to a
+                seamless, modern experience designed for you and your stylist.</p>
+        </div>
+    </section>
+
+    <!-- STATS & MAP SECTION -->
+    <section class="stats-map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="highlight">Global Reach</span></h2>
+                <p>Connecting you with top stylists across the world.</p>
+            </div>
+
+            <div class="stats-container" id="stats-container">
+                <!-- Stats will be injected here via JS -->
+            </div>
+
+            <div class="map-wrapper">
+                <div id="map"></div>
+                <button id="locate-me-btn" class="locate-btn">📍 Locate Me</button>
+            </div>
         </div>
     </section>
 
@@ -146,6 +172,10 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/script.js"></script>
+    <script src="js/stats-map.js"></script>
 </body>
+
 </html>

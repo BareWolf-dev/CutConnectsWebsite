@@ -364,3 +364,158 @@ a {
         justify-content: center;
     }
 }
+
+/* --- 6. STATS & MAP SECTION STYLING --- */
+.stats-map-section {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 5rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: white;
+    /* Fallback */
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.05);
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #a0a0b0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* Map Wrapper */
+.map-wrapper {
+    width: 100%;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Make Leaflet blend in */
+.leaflet-container {
+    background: #111 !important;
+    /* Matches dark theme */
+    font-family: 'Inter', sans-serif;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leaflet-popup-content b {
+    color: var(--secondary-glow);
+}
+
+/* Pulsating User Marker */
+.user-location-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulsating-circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(0, 212, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        gap: 40px;
+    }
+
+    .stat-number {
+        font-size: 3.5rem;
+    }
+
+    .map-wrapper {
+        height: 350px;
+    }
+}
+
+/* Locate Button */
+.locate-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* Above map tiles */
+    background: var(--primary-glow);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(112, 0, 255, 0.6);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.locate-btn:hover {
+    transform: scale(1.05);
+    background: var(--secondary-glow);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}

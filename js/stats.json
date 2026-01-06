@@ -1,0 +1,26 @@
+{
+    "stats": [
+        {
+            "label": "Active Cities",
+            "value": 1,
+            "color": "#00d4ff"
+        },
+        {
+            "label": "Partner Shops",
+            "value": 13,
+            "color": "#7000ff"
+        },
+        {
+            "label": "Happy Clients",
+            "value": 83,
+            "color": "#ff0055"
+        }
+    ],
+    "locations": [
+        {
+            "name": "Kolkata, India",
+            "lat": 22.5744,
+            "lng": 88.3629
+        }
+    ]
+}
