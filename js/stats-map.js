@@ -173,30 +173,9 @@ function initMap(locations) {
             return;
         }
 
-        locateBtn.innerText = "❌ Error";
-
-        let msg = "Unknown error occurred.";
-        switch (error.code) {
-            case error.PERMISSION_DENIED:
-                msg = "Permission denied. Please allow location access.";
-                break;
-            case error.POSITION_UNAVAILABLE:
-                msg = "Location unavailable. Please check your GPS/network.";
-                break;
-            case error.TIMEOUT:
-                msg = "Request timed out.";
-                break;
-        }
-
-        // Fallback check
-        if (!msg || msg === "Unknown error occurred.") {
-            if (error.code === 1) msg = "Permission denied.";
-            else if (error.code === 2) msg = "Position unavailable.";
-            else if (error.code === 3) msg = "Request timed out.";
-        }
-
-        alert(`Could not get your location:\n${msg}\n(Code: ${error.code})`);
-        setTimeout(() => locateBtn.innerText = "📍 Locate Me", 3000);
+        // Silently handle error (no visual failure message)
+        console.warn("Location access failed:", error.message);
+        locateBtn.innerText = "📍 Locate Me";
     };
 
     if (locateBtn) {
@@ -217,7 +196,7 @@ function initMap(locations) {
                     options
                 );
             } else {
-                alert("Geolocation is not supported by your browser.");
+                console.warn("Geolocation is not supported by your browser.");
             }
         });
     }
